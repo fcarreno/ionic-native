@@ -57,7 +57,7 @@ export interface NotificationData {
   pluginName: 'FCM',
   plugin: 'cordova-plugin-fcm',
   pluginRef: 'FCMPlugin',
-  repo: 'https://github.com/fechanique/cordova-plugin-fcm',
+  repo: 'https://github.com/fcarreno/cordova-plugin-fcm',
   platforms: ['Android', 'iOS']
 })
 @Injectable()
@@ -107,6 +107,20 @@ export class FCM extends IonicNativePlugin {
   unsubscribeFromTopic(topic: string): Promise<any> {
     return;
   }
+
+
+  /**
+   * Allows to dismiss an existing notification, by its Id...
+   *
+   * @param {string} id of the notification that will be dismissed
+   *
+   * @returns {Promise<any>} Returns a promise resolving in result of dismissing the notification
+   */
+   @Cordova()
+   dismissNotification(notificationId: string): Promise<any> {
+     return;
+  }
+
 
   /**
    * Watch for incoming notifications
